@@ -1,0 +1,17 @@
+snippet dcFunc "Dynamic C function"
+/*** BeginHeader ${1:name} */
+${2:type} $1(${3:arg});
+/*** EndHeader */
+
+$2 $1($3)
+{
+$0
+}
+endsnippet
+
+snippet incGuard "Include guard"
+#ifndef ${1:MACRO}
+#define $1
+
+#endif  // $1
+endsnippet

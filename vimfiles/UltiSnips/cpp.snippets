@@ -1,0 +1,25 @@
+snippet incGuard "Include guard"
+#ifndef ${1:MACRO}
+#define $1
+
+#endif  // $1
+endsnippet
+
+snippet anonSpace "Anonymous namespace"
+namespace
+{
+
+$1
+
+}   // Anonymous namespace
+endsnippet
+
+snippet nonCopyable "Non-copyable"
+// Non-copyable
+${1:class}(const $1&) = delete;
+$1& operator=(const $1&) = delete;
+endsnippet
+
+snippet revDevCopyright "Company copyright"
+// Copyright (C) 2018 Revolution Display LLC / VER
+endsnippet

@@ -1,0 +1,21 @@
+" Maximize
+if has("win32")
+  autocmd GUIEnter * simalt ~x
+else
+  set lines=999 columns=999
+endif
+
+set guioptions -=T " Hide toolbar
+set guioptions -=m " Hide menu
+set guioptions -=L " Hide left vertical scrollbar
+set guioptions -=r " Hide right vertical scrollbar
+
+" Color/font
+colorscheme molokai
+if has("win32")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h9
+elseif has("macunix")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+elseif has("unix")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+endif
