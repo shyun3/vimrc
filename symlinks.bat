@@ -8,8 +8,8 @@ if "%HOME%" == "" (
 )
 
 :: Create symlinks
-mklink %homeDir%_vimrc %CD%\_vimrc
-mklink %homeDir%_gvimrc %CD%\_gvimrc
-mklink /d %homeDir%vimfiles %CD%\vimfiles
+mklink %homeDir%_vimrc %~dp0%\_vimrc
+mklink %homeDir%_gvimrc %~dp0%\_gvimrc
+mklink /d %homeDir%vimfiles %~dp0%\vimfiles
 
 pause
