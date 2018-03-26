@@ -1,4 +1,8 @@
-## Windows installation instructions
+# My .vimrc
+
+## Installation instructions
+
+### Windows
 
 1. Install Vim using [Scoop][]: `scoop install vim`
 
@@ -25,7 +29,7 @@
 
 1. Install the [YouCompleteMe components][ycm-windows].
 
-1. Download the [Powerline fonts][]. Install them by running `install.ps1`.
+1. Download [Powerline fonts][]. Install them by running `install.ps1`.
 
 1. Install remaining utilities:
     ```
@@ -35,6 +39,32 @@
     scoop install cscope
     ```
     - [Cscope][] is not currently in the main bucket
+
+1. Happy Vimming!
+
+### macOS
+
+1. Install [MacVim][].
+
+1. Run `symlinks.sh`. This will create create symlinks for `_vimrc`,`_gvimrc`,
+   and `vimfiles` in your home directory.
+
+1. Install [Vundle][]:
+    ```
+    git clone https://github.com/VundleVim/Vundle.vim.git <vimfiles directory>/bundle/Vundle.vim
+    ```
+
+1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
+
+1. Install [YouCompleteMe][ycm-mac].
+
+1. Install [Powerline fonts][].
+
+1. Install remaining utilities using [Homebrew][]:
+    ```
+    brew install ripgrep
+    brew install ctags
+    ```
 
 1. Happy Vimming!
 
@@ -49,3 +79,6 @@
 [ycm-windows]: https://github.com/shyun3/ycm-windows
 [Powerline fonts]: https://github.com/powerline/fonts
 [Cscope]: http://cscope.sourceforge.net/
+[MacVim]: http://macvim-dev.github.io/macvim/
+[ycm-mac]: https://github.com/Valloric/YouCompleteMe#mac-os-x
+[Homebrew]: https://brew.sh/
