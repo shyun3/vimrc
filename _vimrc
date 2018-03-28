@@ -275,12 +275,19 @@ let g:airline#extensions#tabline#show_tab_type = 0
 " YouCompleteMe
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_filetype_specific_completion_to_disable = {
-  \ 'c': 1,
-  \ 'cpp': 1,
-  \ 'python': 1,
-  \ 'javascript': 1
-\}
+let g:ycm_seed_identifiers_with_syntax = 1
+
+nnoremap <leader>; :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>s; :sp<CR>:YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>v; :vsp<CR>:YcmCompleter GoToDeclaration<CR>
+
+nnoremap <leader>] :YcmCompleter GoTo<CR>
+nnoremap <leader>s] :sp<CR>:YcmCompleter GoTo<CR>
+nnoremap <leader>v] :vsp<CR>:YcmCompleter GoTo<CR>
+
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>p :YcmCompleter GetParent<CR>
+nnoremap <leader>? :YcmCompleter GetDoc<CR>
 
 " Tagbar
 let g:tagbar_autofocus = 1    " Move to Tagbar window when opened
