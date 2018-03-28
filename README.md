@@ -27,14 +27,14 @@
 
 1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
 
-1. Install the [YouCompleteMe components][ycm-windows].
+1. Install [YouCompleteMe][ycm-windows]. Make sure to compile with semantic
+   support for C-family languages and JavaScript.
 
 1. Download [Powerline fonts][]. Install them by running `install.ps1`.
 
 1. Install remaining utilities:
     ```
-    scoop install ripgrep
-    scoop install ctags
+    scoop install ripgrep ctags
     scoop bucket add my-bucket https://github.com/shyun3/my-bucket
     scoop install cscope
     ```
@@ -56,14 +56,14 @@
 
 1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
 
-1. Install [YouCompleteMe][ycm-mac].
+1. Install [YouCompleteMe][ycm-mac]. Make sure to compile with semantic
+   support for C-family languages and JavaScript.
 
 1. Install [Powerline fonts][].
 
 1. Install remaining utilities using [Homebrew][]:
     ```
-    brew install ripgrep
-    brew install ctags
+    brew install ripgrep ctags
     ```
 
 1. Happy Vimming!
@@ -76,7 +76,7 @@
 
 [Scoop]: http://scoop.sh/
 [Vundle]: https://github.com/VundleVim/Vundle.vim
-[ycm-windows]: https://github.com/shyun3/ycm-windows
+[ycm-windows]: https://github.com/Valloric/YouCompleteMe#windows
 [Powerline fonts]: https://github.com/powerline/fonts
 [Cscope]: http://cscope.sourceforge.net/
 [MacVim]: http://macvim-dev.github.io/macvim/
