@@ -50,6 +50,7 @@ Plugin 'Cognoscan/vim-vhdl'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Text objects
 Plugin 'kana/vim-textobj-user'
@@ -139,10 +140,7 @@ function! SimpleBuild(filepath)
   if filereadable(a:filepath)
     execute l:prefix . a:filepath
   else
-    " Generate ctags and cscope
-    " ctags --fields=+l is needed for YCM parsing
-    " ctags --langmap=c:.c.h is needed since YCM works on similar filetypes
-    execute l:prefix . 'ctags -R --fields=+l --langmap=c:.c.h'
+    " Generate cscope
     execute l:prefix . 'cscope -R -b'
   endif
 endfunction
@@ -328,3 +326,10 @@ let g:mustache_operators = 0  " Disable text objects
 " JSDoc
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_return_description = 0
+
+" Gutentags
+let g:gutentags_ctags_exclude = ['node_modules', 'bower_components']
+
+" ctags --fields=+l is needed for YCM parsing
+" ctags --langmap=c:.c.h is needed since YCM works on similar filetypes
+let g:gutentags_ctags_extra_args = ['--fields=+l', '--langmap=c:.c.h']
