@@ -34,11 +34,8 @@
 
 1. Install remaining utilities:
     ```
-    scoop install ripgrep ctags
-    scoop bucket add my-bucket https://github.com/shyun3/my-bucket
-    scoop install cscope
+    scoop install ripgrep ctags cscope
     ```
-    - [Cscope][] is not currently in the main bucket
 
 1. Happy Vimming!
 
@@ -78,7 +75,6 @@
 [Vundle]: https://github.com/VundleVim/Vundle.vim
 [ycm-windows]: https://github.com/Valloric/YouCompleteMe#windows
 [Powerline fonts]: https://github.com/powerline/fonts
-[Cscope]: http://cscope.sourceforge.net/
 [MacVim]: http://macvim-dev.github.io/macvim/
 [ycm-mac]: https://github.com/Valloric/YouCompleteMe#mac-os-x
 [Homebrew]: https://brew.sh/
