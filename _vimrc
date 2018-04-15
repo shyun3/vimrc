@@ -51,6 +51,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'heavenshell/vim-jsdoc'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'sjl/gundo.vim'
+Plugin 'dsawardekar/portkey'
 
 " Text objects
 Plugin 'kana/vim-textobj-user'
