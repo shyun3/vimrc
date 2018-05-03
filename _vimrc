@@ -333,5 +333,4 @@ let g:jsdoc_return_description = 0
 let g:gutentags_ctags_exclude = ['node_modules', 'bower_components']
 
 " ctags --fields=+l is needed for YCM parsing
-" ctags --langmap=c:.c.h is needed since YCM works on similar filetypes
-let g:gutentags_ctags_extra_args = ['--fields=+l', '--langmap=c:.c.h']
+let g:gutentags_ctags_extra_args = ['--fields=+l']
