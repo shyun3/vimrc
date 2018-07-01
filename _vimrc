@@ -1,12 +1,15 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" .vim directory
+if has("win32")
+  let s:vim_dir = expand("$HOME") . "/vimfiles"
+else
+  let s:vim_dir = "~/.vim"
+endif
 
 " set the runtime path to include Vundle and initialize
+let &rtp .= "," . s:vim_dir . "/bundle/Vundle.vim"
 if has("win32")
-  set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-  call vundle#begin('$HOME/vimfiles/bundle')
+  call vundle#begin(s:vim_dir . "/bundle")
 else
-  set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
 endif
 
@@ -70,11 +73,7 @@ set encoding=utf-8
 " Project
 let g:project_use_nerdtree = 1
 call project#rc()
-if has("win32")
-  silent! source $HOME/vimfiles/projects.vim
-else
-  silent! source ~/.vim/projects.vim
-endif
+execute "silent! source " . s:vim_dir . "/projects.vim"
 
 let c_gnu=1              " Highlight GNU keywords
 " let g:c_syntax_for_h = 1 " Set .h files to C filetype
@@ -93,6 +92,10 @@ set list                                           " Show invisibles
 set path+=**          " Path to search when using gf, etc.
 set cursorline
 set noswapfile
+
+" undofile
+set undofile
+let &undodir = s:vim_dir . "/undo"
 
 " Terminal
 tnoremap <Esc> <C-\><C-n>
