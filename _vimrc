@@ -94,6 +94,10 @@ set path+=**          " Path to search when using gf, etc.
 set cursorline
 set noswapfile
 
+" Terminal
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-v><Esc> <Esc>
+
 " Tabs
 set expandtab     " Change tabs to spaces
 set tabstop=2     " Number of spaces in a tab
