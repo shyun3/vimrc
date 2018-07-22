@@ -18,12 +18,7 @@
    and `vimfiles` in your home directory. You can modify what Vim interprets as
    your home directory by editing your `HOME` environment variable.
 
-1. Install [Vundle][]:
-    ```
-    scoop install git
-    scoop install curl
-    git clone https://github.com/VundleVim/Vundle.vim.git <vimfiles directory>/bundle/Vundle.vim
-    ```
+1. Install [minpac][]:
 
 1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
 
@@ -46,10 +41,7 @@
 1. Run `symlinks.sh`. This will create create symlinks for `_vimrc`,`_gvimrc`,
    and `vimfiles` in your home directory.
 
-1. Install [Vundle][]:
-    ```
-    git clone https://github.com/VundleVim/Vundle.vim.git <vimfiles directory>/bundle/Vundle.vim
-    ```
+1. Install [minpac][]:
 
 1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
 
@@ -72,7 +64,7 @@
   the extension has been allowed access to file URLs.
 
 [Scoop]: http://scoop.sh/
-[Vundle]: https://github.com/VundleVim/Vundle.vim
+[minpac]: https://github.com/k-takata/minpac
 [ycm-windows]: https://github.com/Valloric/YouCompleteMe#windows
 [Powerline fonts]: https://github.com/powerline/fonts
 [MacVim]: http://macvim-dev.github.io/macvim/

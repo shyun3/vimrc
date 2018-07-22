@@ -5,73 +5,68 @@ else
   let s:vim_dir = "~/.vim"
 endif
 
-" set the runtime path to include Vundle and initialize
-let &rtp .= "," . s:vim_dir . "/bundle/Vundle.vim"
-if has("win32")
-  call vundle#begin(s:vim_dir . "/bundle")
-else
-  call vundle#begin()
-endif
+packadd minpac
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
 
-" Keep Plugin commands between vundle#begin/end.
+call minpac#init()
+
+" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+" Add other plugins here.
 
 " Colors
-Plugin 'tomasr/molokai'
+call minpac#add('tomasr/molokai')
 
 " Plugins
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-sensible'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'amiorin/vim-project'
-Plugin 'scrooloose/nerdtree'
-Plugin 'inside/vim-search-pulse'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-repeat'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ludovicchabant/vim-lawrencium'
-Plugin 'yssl/QFEnter'
-Plugin 'tpope/vim-surround'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'majutsushi/tagbar'
-Plugin 'SirVer/ultisnips'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'sophacles/vim-processing'
-Plugin 'PProvost/vim-ps1'
-Plugin 'DoxygenToolkit.vim'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'vimwiki/vimwiki'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'Cognoscan/vim-vhdl'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'heavenshell/vim-jsdoc'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'sjl/gundo.vim'
-Plugin 'dsawardekar/portkey'
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('tpope/vim-sensible')
+call minpac#add('nelstrom/vim-visual-star-search')
+call minpac#add('easymotion/vim-easymotion')
+call minpac#add('amiorin/vim-project', {'type': 'opt'})
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('inside/vim-search-pulse')
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-repeat')
+call minpac#add('Valloric/YouCompleteMe', {'do': '!git submodule update --init --recursive'})
+call minpac#add('ludovicchabant/vim-lawrencium')
+call minpac#add('yssl/QFEnter')
+call minpac#add('tpope/vim-surround')
+call minpac#add('bkad/CamelCaseMotion', {'type': 'opt'})
+call minpac#add('majutsushi/tagbar')
+call minpac#add('SirVer/ultisnips')
+call minpac#add('mileszs/ack.vim')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('sophacles/vim-processing')
+call minpac#add('PProvost/vim-ps1')
+call minpac#add('vim-scripts/DoxygenToolkit.vim')
+call minpac#add('junegunn/vim-easy-align')
+call minpac#add('vimwiki/vimwiki')
+call minpac#add('vim-airline/vim-airline-themes')
+call minpac#add('nathanaelkane/vim-indent-guides')
+call minpac#add('Cognoscan/vim-vhdl')
+call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('mustache/vim-mustache-handlebars')
+call minpac#add('heavenshell/vim-jsdoc')
+call minpac#add('ludovicchabant/vim-gutentags')
+call minpac#add('sjl/gundo.vim')
+call minpac#add('dsawardekar/portkey')
 
 " Text objects
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'glts/vim-textobj-comment'
-Plugin 'fvictorio/vim-textobj-backticks'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" Put your non-Plugin stuff after this line
+call minpac#add('kana/vim-textobj-user')
+call minpac#add('kana/vim-textobj-entire')
+call minpac#add('glts/vim-textobj-comment')
+call minpac#add('fvictorio/vim-textobj-backticks')
 
 set encoding=utf-8
 
 " Project
 let g:project_use_nerdtree = 1
+packadd vim-project
 call project#rc()
 execute "silent! source " . s:vim_dir . "/projects.vim"
 
@@ -318,6 +313,7 @@ let g:ack_apply_qmappings = 0
 let g:ack_apply_lmappings = 0
 
 " CamelCaseMotion
+packadd CamelCaseMotion
 call camelcasemotion#CreateMotionMappings(',')
 
 " Indent guides
