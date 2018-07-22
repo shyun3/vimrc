@@ -201,13 +201,8 @@ endif
 " CtrlP
 let g:ctrlp_switch_buffer = 0     " Always open a new instance
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'autoignore']
-let g:ctrlp_show_hidden = 1       " Show dotfiles and dotdirs
-let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_user_command = 'rg --files -F --color never --hidden --follow -g "!.*/" %s'
 let g:ctrlp_by_filename = 1       " Search filenames by default
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(o|swp|pyc|d|png)$',
-\}
 let g:ctrlp_buftag_types = {
   \ 'arduino': '--language-force=c++',
   \ 'processing': '--language-force=java',
