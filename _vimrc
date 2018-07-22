@@ -38,7 +38,7 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('bkad/CamelCaseMotion', {'type': 'opt'})
 call minpac#add('majutsushi/tagbar')
 call minpac#add('SirVer/ultisnips')
-call minpac#add('mileszs/ack.vim')
+call minpac#add('mhinz/vim-grepper', {'type': 'opt'})
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('sophacles/vim-processing')
@@ -313,10 +313,11 @@ let g:UltiSnipsJumpBackwardTrigger="<A-b>"
 let g:UltiSnipsEditSplit = 'horizontal'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ack
-let g:ackprg = "rg --vimgrep --smart-case --follow"
-let g:ack_apply_qmappings = 0
-let g:ack_apply_lmappings = 0
+" grepper
+packadd vim-grepper
+runtime plugin/grepper.vim
+let g:grepper.tools = ['rg', 'git']
+let g:grepper.rg.grepprg .= ' --smart-case --follow'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CamelCaseMotion
