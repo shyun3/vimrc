@@ -54,7 +54,7 @@ call minpac#add('mustache/vim-mustache-handlebars')
 call minpac#add('heavenshell/vim-jsdoc')
 call minpac#add('ludovicchabant/vim-gutentags')
 call minpac#add('sjl/gundo.vim')
-call minpac#add('dsawardekar/portkey')
+call minpac#add('tpope/vim-projectionist')
 
 " Text objects
 call minpac#add('kana/vim-textobj-user')
@@ -198,6 +198,7 @@ else
   nnoremap ˜ :execute "cd " . g:NERDTreeFileNode.GetRootForTab().path.str()<CR>
 endif
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 let g:ctrlp_switch_buffer = 0     " Always open a new instance
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'autoignore']
@@ -219,6 +220,7 @@ else
   nnoremap π :CtrlPMRU<CR>
 endif
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EasyMotion
 let g:EasyMotion_do_mapping = 0            " Disable default mappings
 let g:EasyMotion_re_anywhere = '\v(<.|^$)' " Beginning of word
@@ -227,9 +229,11 @@ map _ <Plug>(easymotion-s)
 map <C-J> <Plug>(easymotion-bd-jk)
 nmap <Space> <Plug>(easymotion-jumptoanywhere)
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERD Tree
 nnoremap <silent> <C-n> :NERDTree<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope
 set cscopetag                " Search tags and cscope
 set cscopetagorder=1         " Order in which tags and cscope are searched
@@ -244,15 +248,18 @@ function! CscopeFind(name, querytype)
   cscope kill cscope.out
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search pulse
 let g:vim_search_pulse_mode = 'pattern'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " QFEnter (use CtrlP mappings)
 let g:qfenter_keymap = {}
 let g:qfenter_keymap.vopen = ['<C-v>']
 let g:qfenter_keymap.hopen = ['<C-CR>', '<C-s>', '<C-x>']
 let g:qfenter_keymap.topen = ['<C-t>']
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
@@ -269,6 +276,7 @@ let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -286,6 +294,7 @@ nnoremap <silent> <leader>t :YcmCompleter GetType<CR>
 nnoremap <silent> <leader>p :YcmCompleter GetParent<CR>
 nnoremap <silent> <leader>? :YcmCompleter GetDoc<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
 let g:tagbar_autofocus = 1    " Move to Tagbar window when opened
 let g:tagbar_sort = 0
@@ -295,6 +304,7 @@ else
   nmap † :TagbarToggle<CR>
 endif
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<C-s>"
 let g:UltiSnipsJumpForwardTrigger="<A-f>"
@@ -302,31 +312,38 @@ let g:UltiSnipsJumpBackwardTrigger="<A-b>"
 
 let g:UltiSnipsEditSplit = 'horizontal'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ack
 let g:ackprg = "rg --vimgrep --smart-case --follow"
 let g:ack_apply_qmappings = 0
 let g:ack_apply_lmappings = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CamelCaseMotion
 packadd CamelCaseMotion
 call camelcasemotion#CreateMotionMappings(',')
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent guides
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'project',
   \ 'markdown']
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EditorConfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']   " Work with fugitive
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Handlebars
 let g:mustache_operators = 0  " Disable text objects
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " JSDoc
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_return_description = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gutentags
 let g:gutentags_ctags_exclude = ['node_modules', 'bower_components']
 
