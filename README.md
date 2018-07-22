@@ -4,12 +4,10 @@
 
 ### Windows
 
-1. Install Vim using [Scoop][]: `scoop install vim`
-
-1. Install Python:
+1. Install Vim and other dependencies using [Scoop][]:
     ```
     scoop bucket add versions
-    scoop install python36
+    scoop install vim git python36 ripgrep ctags cscope
     ```
     - Currently, Vim does not detect Python if installing from the main Scoop
       bucket due to a PATH issue
@@ -20,17 +18,11 @@
 
 1. Install [minpac][].
 
-1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
+1. Start Vim. Ignore any errors and run `:PackUpdate`. Exit when finished.
 
-1. Install [YouCompleteMe][ycm-windows]. Make sure to compile with semantic
-   support for C-family languages and JavaScript.
+1. Install [YouCompleteMe][ycm-windows].
 
 1. Download [Powerline fonts][]. Install them by running `install.ps1`.
-
-1. Install remaining utilities:
-    ```
-    scoop install ripgrep ctags cscope
-    ```
 
 1. Happy Vimming!
 
@@ -43,10 +35,9 @@
 
 1. Install [minpac][].
 
-1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
+1. Start Vim. Ignore any errors and run `:PackUpdate`. Exit when finished.
 
-1. Install [YouCompleteMe][ycm-mac]. Make sure to compile with semantic
-   support for C-family languages and JavaScript.
+1. Install [YouCompleteMe][ycm-mac].
 
 1. Install [Powerline fonts][].
 
