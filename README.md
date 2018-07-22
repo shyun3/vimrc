@@ -18,7 +18,7 @@
    and `vimfiles` in your home directory. You can modify what Vim interprets as
    your home directory by editing your `HOME` environment variable.
 
-1. Install [minpac][]:
+1. Install [minpac][].
 
 1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
 
@@ -41,7 +41,7 @@
 1. Run `symlinks.sh`. This will create create symlinks for `_vimrc`,`_gvimrc`,
    and `vimfiles` in your home directory.
 
-1. Install [minpac][]:
+1. Install [minpac][].
 
 1. Start Vim. Ignore any errors and run `:PluginInstall`. Exit when finished.
 
