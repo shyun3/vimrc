@@ -21,7 +21,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tomasr/molokai')
 
 " Plugins
-call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('shyun3/ctrlp.vim', {'branch': 'pullreq'})
 call minpac#add('tpope/vim-sensible')
 call minpac#add('nelstrom/vim-visual-star-search')
 call minpac#add('easymotion/vim-easymotion')
@@ -204,6 +204,7 @@ let g:ctrlp_switch_buffer = 0     " Always open a new instance
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'autoignore']
 let g:ctrlp_user_command = 'rg --files -F --color never --hidden --follow -g "!.*/" %s'
 let g:ctrlp_by_filename = 1       " Search filenames by default
+let g:ctrlp_buftag_ctags_bin = 'univ_ctags'
 let g:ctrlp_buftag_types = {
   \ 'arduino': '--language-force=c++',
   \ 'processing': '--language-force=java',
@@ -346,6 +347,7 @@ let g:jsdoc_return_description = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gutentags
+let g:gutentags_ctags_executable = 'univ_ctags'
 let g:gutentags_ctags_exclude = ['node_modules', 'bower_components']
 
 " ctags --fields=+l is needed for YCM parsing
