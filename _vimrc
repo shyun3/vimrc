@@ -53,6 +53,7 @@ call minpac#add('heavenshell/vim-jsdoc')
 call minpac#add('ludovicchabant/vim-gutentags')
 call minpac#add('sjl/gundo.vim')
 call minpac#add('tpope/vim-projectionist')
+call minpac#add('shyun3/vim-cmake-lists')
 
 " Text objects
 call minpac#add('kana/vim-textobj-user')
