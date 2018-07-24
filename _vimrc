@@ -32,7 +32,6 @@ call minpac#add('vim-airline/vim-airline')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('Valloric/YouCompleteMe', {'do': '!git submodule update --init --recursive'})
-call minpac#add('ludovicchabant/vim-lawrencium')
 call minpac#add('yssl/QFEnter')
 call minpac#add('tpope/vim-surround')
 call minpac#add('bkad/CamelCaseMotion', {'type': 'opt'})
@@ -41,7 +40,6 @@ call minpac#add('SirVer/ultisnips')
 call minpac#add('mhinz/vim-grepper', {'type': 'opt'})
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-fugitive')
-call minpac#add('sophacles/vim-processing')
 call minpac#add('PProvost/vim-ps1')
 call minpac#add('vim-scripts/DoxygenToolkit.vim')
 call minpac#add('junegunn/vim-easy-align')
@@ -207,7 +205,6 @@ let g:ctrlp_by_filename = 1       " Search filenames by default
 let g:ctrlp_buftag_ctags_bin = 'univ_ctags'
 let g:ctrlp_buftag_types = {
   \ 'arduino': '--language-force=c++',
-  \ 'processing': '--language-force=java',
 \}
 let g:ctrlp_working_path_mode = ''
 
