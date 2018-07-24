@@ -59,6 +59,7 @@ call minpac#add('kana/vim-textobj-user')
 call minpac#add('kana/vim-textobj-entire')
 call minpac#add('glts/vim-textobj-comment')
 call minpac#add('fvictorio/vim-textobj-backticks')
+call minpac#add('kana/vim-textobj-indent')
 
 set encoding=utf-8
 
