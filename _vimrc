@@ -83,7 +83,6 @@ set splitbelow        " All horizontal splits open below
 set colorcolumn=80    " Show right margin
 set listchars=tab:»\ ,trail:·,precedes:◄,extends:► " Set invisibles
 set list                                           " Show invisibles
-set path+=**          " Path to search when using gf, etc.
 set cursorline
 set noswapfile
 
