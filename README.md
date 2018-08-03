@@ -6,9 +6,8 @@
 
 1. Install Vim and other dependencies using [Scoop][]:
     ```
-    scoop bucket add versions
-    scoop install vim git python36 ripgrep cscope
     scoop bucket add my-bucket https://github.com/shyun3/my-bucket
+    scoop install vim git python3 ripgrep cscope
     scoop install universal-ctags
     ```
     - Currently, Vim does not detect Python if installing from the main Scoop
