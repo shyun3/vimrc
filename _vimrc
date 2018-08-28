@@ -283,6 +283,7 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_max_num_candidates = 10
 
 let g:ycm_filter_diagnostics = {
   \ "cs": {
