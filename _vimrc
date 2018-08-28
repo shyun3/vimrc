@@ -105,6 +105,9 @@ set shiftwidth=2  " Indentation width
 set cinoptions=g0   " Don't indent class scope declarations
 set cinoptions+=N-s " Don't indent contents of namespace
 
+" Completion window
+set completeopt="menu"
+
 augroup myAutosaveGroup
   autocmd!
   autocmd BufLeave,FocusLost * silent! update   " Save when leaving buffer
