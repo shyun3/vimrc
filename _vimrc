@@ -329,6 +329,7 @@ packadd vim-grepper
 runtime plugin/grepper.vim
 let g:grepper.tools = ['rg', 'git']
 let g:grepper.rg.grepprg .= ' --smart-case --follow'
+let g:grepper.dir = 'filecwd'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CamelCaseMotion
