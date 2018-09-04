@@ -108,10 +108,13 @@ set cinoptions+=N-s " Don't indent contents of namespace
 " Completion window
 set completeopt="menu"
 
+" Autocommands
 augroup myAutosaveGroup
   autocmd!
   autocmd BufLeave,FocusLost * silent! update   " Save when leaving buffer
 augroup END
+
+autocmd BufNewFile,BufRead *.xaml setf xml
 
 " Mappings
 " Make & keep sub flags
