@@ -363,7 +363,7 @@ let g:jsdoc_return_description = 0
 " Gutentags
 let g:gutentags_ctags_executable = 'univ_ctags'
 let g:gutentags_ctags_exclude = ['node_modules', 'bower_components']
-let g:gutentags_project_root = ['.ctrlpignore']
+let g:gutentags_project_root = ['.rgignore']
 
 " ctags --fields=+l is needed for YCM parsing
 let g:gutentags_ctags_extra_args = ['--fields=+l']
