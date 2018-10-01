@@ -335,7 +335,7 @@ let g:grepper.rg.grepprg .= ' --smart-case --follow'
 let g:grepper.dir = 'filecwd'
 
 let g:grepper = { 'open': 0 }
-autocmd User Grepper copen
+autocmd User Grepper botright copen
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CamelCaseMotion
