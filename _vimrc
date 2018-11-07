@@ -188,6 +188,11 @@ if !has("macunix")
   nnoremap <silent> <A-2> :2wincmd w<CR>
   nnoremap <silent> <A-3> :3wincmd w<CR>
   nnoremap <silent> <A-4> :4wincmd w<CR>
+  nnoremap <silent> <A-5> :5wincmd w<CR>
+  nnoremap <silent> <A-6> :6wincmd w<CR>
+  nnoremap <silent> <A-7> :7wincmd w<CR>
+  nnoremap <silent> <A-8> :8wincmd w<CR>
+  nnoremap <silent> <A-9> :9wincmd w<CR>
 else
   nnoremap <silent> ç :wincmd c<CR>
   nnoremap <silent> œ :botright copen<CR>
