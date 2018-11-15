@@ -339,7 +339,7 @@ let g:grepper.tools = ['rg', 'git']
 let g:grepper.rg.grepprg .= ' --smart-case --follow'
 let g:grepper.dir = 'filecwd'
 
-let g:grepper = { 'open': 0 }
+let g:grepper.open = 0
 autocmd User Grepper botright copen
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
