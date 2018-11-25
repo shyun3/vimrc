@@ -21,7 +21,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tomasr/molokai')
 
 " Plugins
-call minpac#add('shyun3/ctrlp.vim', {'branch': 'pullreq'})
+call minpac#add('shyun3/ctrlp.vim', {'branch': 'personal'})
 call minpac#add('tpope/vim-sensible')
 call minpac#add('nelstrom/vim-visual-star-search')
 call minpac#add('easymotion/vim-easymotion')
