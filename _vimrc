@@ -293,13 +293,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_max_num_candidates = 10
-
-let g:ycm_filter_diagnostics = {
-  \ "cs": {
-  \   "regex": ".*",
-  \   "level": "error"
-  \ }
-\}
+let g:ycm_show_diagnostics_ui = 0
 
 nnoremap <silent> <leader>; :YcmCompleter GoToDeclaration<CR>
 nnoremap <silent> <leader>s; :sp<CR>:YcmCompleter GoToDeclaration<CR>
