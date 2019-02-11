@@ -1,11 +1,11 @@
-snippet incGuard "Include guard"
+snippet includeGuard "Include guard"
 #ifndef ${1:MACRO}
 #define $1
 
 #endif  // $1
 endsnippet
 
-snippet anonSpace "Anonymous namespace"
+snippet anonNamespace "Anonymous namespace"
 namespace
 {
 
@@ -20,11 +20,11 @@ ${1:class}(const $1&) = delete;
 $1& operator=(const $1&) = delete;
 endsnippet
 
-snippet revDevCopyright "Company copyright"
-// Copyright (C) 2018 Revolution Display LLC / VER
+snippet avCopyright "Company copyright"
+// Copyright (C) 2019, AeroVironment, Inc. All rights reserved.
 endsnippet
 
-snippet nameSpace "Namespace"
+snippet namespace "Namespace"
 namespace $1
 {
 
