@@ -7,6 +7,8 @@ endif
 
 call plug#begin(s:vim_dir . "/bundle")
 
+Plug 'junegunn/vim-plug'
+
 " Colors
 Plug 'tomasr/molokai'
 
