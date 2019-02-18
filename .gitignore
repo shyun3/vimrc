@@ -1,4 +1,4 @@
 vimfiles/projects.vim
 vimfiles/undo/
 .gitignore_global
-vimfiles/pack/*
+vimfiles/bundle

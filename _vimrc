@@ -5,68 +5,59 @@ else
   let s:vim_dir = "~/.vim"
 endif
 
-packadd minpac
-
-command! PackUpdate call minpac#update()
-command! PackClean call minpac#clean()
-
-call minpac#init()
-
-" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-
-" Add other plugins here.
+call plug#begin(s:vim_dir . "/bundle")
 
 " Colors
-call minpac#add('tomasr/molokai')
+Plug 'tomasr/molokai'
 
 " Plugins
-call minpac#add('shyun3/ctrlp.vim', {'branch': 'personal'})
-call minpac#add('tpope/vim-sensible')
-call minpac#add('nelstrom/vim-visual-star-search')
-call minpac#add('easymotion/vim-easymotion')
-call minpac#add('amiorin/vim-project', {'type': 'opt'})
-call minpac#add('scrooloose/nerdtree')
-call minpac#add('inside/vim-search-pulse')
-call minpac#add('vim-airline/vim-airline')
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('Valloric/YouCompleteMe', {'do': '!git submodule update --init --recursive'})
-call minpac#add('yssl/QFEnter')
-call minpac#add('tpope/vim-surround')
-call minpac#add('bkad/CamelCaseMotion', {'type': 'opt'})
-call minpac#add('majutsushi/tagbar')
-call minpac#add('SirVer/ultisnips')
-call minpac#add('mhinz/vim-grepper', {'type': 'opt'})
-call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('PProvost/vim-ps1')
-call minpac#add('vim-scripts/DoxygenToolkit.vim')
-call minpac#add('junegunn/vim-easy-align')
-call minpac#add('vimwiki/vimwiki')
-call minpac#add('vim-airline/vim-airline-themes')
-call minpac#add('nathanaelkane/vim-indent-guides')
-call minpac#add('Cognoscan/vim-vhdl')
-call minpac#add('editorconfig/editorconfig-vim')
-call minpac#add('mustache/vim-mustache-handlebars')
-call minpac#add('heavenshell/vim-jsdoc')
-call minpac#add('ludovicchabant/vim-gutentags')
-call minpac#add('sjl/gundo.vim')
-call minpac#add('tpope/vim-projectionist')
-call minpac#add('shyun3/vim-cmake-lists')
+Plug 'shyun3/ctrlp.vim', {'branch': 'personal'}
+Plug 'tpope/vim-sensible'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'easymotion/vim-easymotion'
+Plug 'amiorin/vim-project'
+Plug 'scrooloose/nerdtree'
+Plug 'inside/vim-search-pulse'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+Plug 'Valloric/YouCompleteMe', {'do': '!git submodule update --init --recursive'}
+Plug 'yssl/QFEnter'
+Plug 'tpope/vim-surround'
+Plug 'bkad/CamelCaseMotion'
+Plug 'majutsushi/tagbar'
+Plug 'SirVer/ultisnips'
+Plug 'mhinz/vim-grepper'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'PProvost/vim-ps1'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'vimwiki/vimwiki'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Cognoscan/vim-vhdl'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-projectionist'
+Plug 'shyun3/vim-cmake-lists'
 
 " Text objects
-call minpac#add('kana/vim-textobj-user')
-call minpac#add('kana/vim-textobj-entire')
-call minpac#add('glts/vim-textobj-comment')
-call minpac#add('fvictorio/vim-textobj-backticks')
-call minpac#add('kana/vim-textobj-indent')
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'glts/vim-textobj-comment'
+Plug 'fvictorio/vim-textobj-backticks'
+Plug 'kana/vim-textobj-indent'
+
+call plug#end()
 
 set encoding=utf-8
 
 " Project
 let g:project_use_nerdtree = 1
-packadd vim-project
 call project#rc()
 execute "silent! source " . s:vim_dir . "/projects.vim"
 
@@ -327,7 +318,6 @@ let g:UltiSnipsEditSplit = 'horizontal'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " grepper
-packadd vim-grepper
 runtime plugin/grepper.vim
 let g:grepper.tools = ['rg', 'git']
 let g:grepper.rg.grepprg .= ' --smart-case --follow'
@@ -338,7 +328,6 @@ autocmd User Grepper botright copen
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CamelCaseMotion
-packadd CamelCaseMotion
 call camelcasemotion#CreateMotionMappings(',')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
