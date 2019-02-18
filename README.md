@@ -18,8 +18,6 @@
    modify what Vim interprets as your home directory by editing your `HOME`
    environment variable.
 
-1. Install [minpac][].
-
 1. Start Vim. Ignore any errors and run `:PackUpdate`. Exit when finished.
 
 1. Install [YouCompleteMe][ycm-windows].
@@ -34,8 +32,6 @@
 
 1. Extract this repo and run `symlinks.sh`. This will create create symlinks
    for `_vimrc`,`_gvimrc`, and `vimfiles` in your home directory.
-
-1. Install [minpac][].
 
 1. Start Vim. Ignore any errors and run `:PackUpdate`. Exit when finished.
 
@@ -58,7 +54,6 @@
   the extension has been allowed access to file URLs.
 
 [Scoop]: http://scoop.sh/
-[minpac]: https://github.com/k-takata/minpac
 [ycm-windows]: https://github.com/Valloric/YouCompleteMe#windows
 [Powerline fonts]: https://github.com/powerline/fonts
 [MacVim]: http://macvim-dev.github.io/macvim/
