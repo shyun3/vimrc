@@ -23,7 +23,7 @@ Plug 'inside/vim-search-pulse'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
-Plug 'Valloric/YouCompleteMe', {'do': '!git submodule update --init --recursive'}
+Plug 'Valloric/YouCompleteMe'
 Plug 'yssl/QFEnter'
 Plug 'tpope/vim-surround'
 Plug 'bkad/CamelCaseMotion'
