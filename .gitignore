@@ -2,3 +2,4 @@ vimfiles/projects.vim
 vimfiles/undo/
 .gitignore_global
 vimfiles/bundle
+vimfiles/autoload/plug.vim*
