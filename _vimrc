@@ -208,7 +208,6 @@ let g:ctrlp_switch_buffer = 0     " Always open a new instance
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'autoignore']
 let g:ctrlp_user_command = 'rg --files -F --color never --hidden --follow -g "!.*/" %s'
 let g:ctrlp_by_filename = 1       " Search filenames by default
-let g:ctrlp_buftag_ctags_bin = 'univ_ctags'
 let g:ctrlp_buftag_types = {
   \ 'arduino': '--language-force=c++',
 \}
@@ -354,7 +353,6 @@ let g:jsdoc_return_description = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gutentags
-let g:gutentags_ctags_executable = 'univ_ctags'
 let g:gutentags_ctags_exclude = ['node_modules', 'bower_components']
 let g:gutentags_project_root = ['.rgignore', '.editorconfig', '.ycm_extra_conf.py']
 
