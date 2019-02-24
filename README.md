@@ -18,7 +18,9 @@
    modify what Vim interprets as your home directory by editing your `HOME`
    environment variable.
 
-1. Start Vim. Ignore any errors and run `:PackUpdate`. Exit when finished.
+1. Install [vim-plug][].
+
+1. Start Vim. Ignore any errors and run `:PlugInstall`. Exit when finished.
 
 1. Install [YouCompleteMe][ycm-windows].
 
@@ -33,7 +35,9 @@
 1. Extract this repo and run `symlinks.sh`. This will create create symlinks
    for `_vimrc`,`_gvimrc`, and `vimfiles` in your home directory.
 
-1. Start Vim. Ignore any errors and run `:PackUpdate`. Exit when finished.
+1. Install [vim-plug][].
+
+1. Start Vim. Ignore any errors and run `:PlugInstall`. Exit when finished.
 
 1. Install [YouCompleteMe][ycm-mac].
 
@@ -59,3 +63,4 @@
 [MacVim]: http://macvim-dev.github.io/macvim/
 [ycm-mac]: https://github.com/Valloric/YouCompleteMe#mac-os-x
 [Homebrew]: https://brew.sh/
+[vim-plug]: https://github.com/junegunn/vim-plug
